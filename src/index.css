@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/* Import custom fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+/* Global styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Define theme variables using @theme */
+@theme {
+  /* Font sizes */
+  --font-size-xs: 12px;
+  --line-height-xs: 16px;
+  --font-size-sm: 14px;
+  --line-height-sm: 20px;
+  --font-size-base: 16px;
+  --line-height-base: 19.5px;
+  --font-size-lg: 18px;
+  --line-height-lg: 21.94px;
+  --font-size-xl: 20px;
+  --line-height-xl: 24.38px;
+  --font-size-2xl: 24px;
+  --line-height-2xl: 29.26px;
+  --font-size-3xl: 28px;
+  --line-height-3xl: 50px;
+  --font-size-4xl: 48px;
+  --line-height-4xl: 58px;
+  --font-size-8xl: 96px;
+  --line-height-8xl: 106px;
+
+  /* Colors */
+  --color-primary: #ECEEFF;
+  --color-coral-red: #FF6452;
+  --color-slate-gray: #6D6D6D;
+  --color-pale-blue: #F5F6FF;
+  --color-white-400: rgba(255, 255, 255, 0.80);
+
+  /* Font families */
+  --font-family-palanquin: 'Palanquin', sans-serif;
+  --font-family-montserrat: 'Montserrat', sans-serif;
+
+  /* Box shadows */
+  --box-shadow-3xl: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+  /* Background images */
+  --bg-hero: url('assets/images/collection-background.svg');
+  --bg-card: url('assets/images/thumbnail-background.svg');
+
+  /* Breakpoints */
+  --screen-wide: 1440px;
+}
+
+/* Define components using @layer components */
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .input {
+    display: flex;
+    flex: 1;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    outline: none;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-slate-gray);
+    border-radius: 9999px; /* Full rounded */
+  }
+}
+
+/* Define custom utilities using @layer utilities */
+@layer utilities {
+  .padding {
+    padding: 2rem; /* Default padding */
+    @media (min-width: 640px) {
+      padding: 4rem; /* Padding for small screens and above */
+    }
+  }
+
+  .padding-x {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .padding-y {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .padding-l {
+    padding-left: 2rem;
+    @media (min-width: 640px) {
+      padding-left: 4rem;
+    }
+  }
+
+  .padding-r {
+    padding-right: 2rem;
+    @media (min-width: 640px) {
+      padding-right: 4rem;
+    }
+  }
+
+  .padding-t {
+    padding-top: 2rem;
+    @media (min-width: 640px) {
+      padding-top: 4rem;
+    }
+  }
+
+  .padding-b {
+    padding-bottom: 2rem;
+    @media (min-width: 640px) {
+      padding-bottom: 4rem;
+    }
+  }
+
+  .info-text {
+    font-size: 1.125rem; /* Matches text-lg */
+    line-height: 1.75rem; /* Matches leading-7 */
+    color: var(--color-slate-gray);
+  }
+
+  .bg-hero {
+    background-image: var(--bg-hero);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .bg-card {
+    background-image: var(--bg-card);
+    background-size: cover;
+    background-position: center;
+  }
+}
