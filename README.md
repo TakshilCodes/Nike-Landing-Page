@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Nike Landing Page
 
 A modern and responsive replica of the **Nike** landing page built using **React.js** and **Tailwind CSS**. This project serves as a frontend development practice to enhance UI/UX skills by replicating a renowned sportswear brand's website.
@@ -88,7 +88,3 @@ git push origin feature/your-feature-name
 
 # Open a Pull Request describing your changes
 ```
-=======
-Hello I am Takshil Pandya,<br/>
-Visit This URL to Visit My webpage:-https://takshilcodes.github.io/Nike-Landing-Page/
->>>>>>> 7cf351276cd2277fef2fb1db1147b27650d8df0d
